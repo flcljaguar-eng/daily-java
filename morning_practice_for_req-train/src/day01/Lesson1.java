@@ -22,7 +22,7 @@ public class Lesson1 {
 	public static void main(String[] args) {
 		/*ここから記入*/
 		//変数を定義
-		//12を代入する
+		//num1に12を代入する
 		int num1 =12;
 		double num2 =1.6;
 		boolean num3 =true;
