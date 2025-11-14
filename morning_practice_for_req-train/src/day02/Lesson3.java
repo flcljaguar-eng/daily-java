@@ -33,16 +33,19 @@ public class Lesson3 {
 		System.out.print("金額①を入力してください>>");
 		String str1 = reader.readLine();
 		int num1 = Integer.parseInt(str1);
+		inputCount += 1;
 		
 		System.out.print("金額②を入力してください>>");
 		String str2 = reader.readLine();
 		int num2 = Integer.parseInt(str2);
+		inputCount += 1;
 		
 		System.out.print("金額③を入力してください>>");
 		String str3 = reader.readLine();
 		int num3 = Integer.parseInt(str3);
+		inputCount += 1;
 		
-		inputCount = 3;
+		
 		sum = (num1 + num2 + num3);
 		sum *= 1.08;
 		sum = (int)sum;
