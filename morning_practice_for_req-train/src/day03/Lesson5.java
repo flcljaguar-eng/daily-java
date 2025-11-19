@@ -29,6 +29,8 @@ public class Lesson5 {
 
 	public static void main(String[] args) throws IOException {
 		/*ここから記入*/
+		System.out.print("input number[0 or1]?>>");
+		
 		boolean[] number ;
 		number = new boolean[2];
 		number[0] = true;
@@ -38,7 +40,7 @@ public class Lesson5 {
 		String inputNum = reader.readLine();
 		int iNum = Integer.parseInt(inputNum);
 		
-		System.out.println("input number[0 or1]?。");
+		
 		
 		switch (iNum) {
 		case 0:
