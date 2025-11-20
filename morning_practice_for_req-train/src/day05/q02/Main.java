@@ -60,7 +60,32 @@ class Main {
 
 	public static void main(String[] args) throws IOException {
 		/*ここから記入*/
-
+		System.out.println("4ケタのログインIDを入力してください");
+		// ConsoleReaderとValidationのオブジェクトを生成
+		ConsoleReader reader = new ConsoleReader();
+		Validation checker = new Validation();
+		
+		// ログイン状態を判定するboolean型の変数を宣言
+		boolean log = false ;
+		//ID番号を格納するint型の変数を宣言
+		int id = 1;
+		
+		while (log == false) {
+			System.out.print("\ninput id? >>");
+			
+			// ConsoleReaderクラスのinputId()をid番号を格納する変数に代入
+			id = reader.inputId();
+			// idを引数にしてValidationクラスのcheckId(id)を呼び出す
+			log = checker.checkId(id);
+			
+			// 	ログイン状態がfalseの場合の処理
+			if (log == false) {
+				System.out.println("ログインできません");
+				System.out.println("もう一度入力してください");
+			}
+		}
+		System.out.println("ログインに成功しました");
+		System.out.println("ようこそ、ID:"+ id +"さん");
 	}
 
 }
