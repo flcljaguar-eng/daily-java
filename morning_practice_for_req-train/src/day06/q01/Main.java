@@ -40,7 +40,21 @@ class Main {
 
 	public static void main(String[] args) {
 		/*ここから記入*/
-
+		// Phoneオブジェクトを作成
+		Phone phone = new Phone();
+		
+		System.out.println("シェアード電話に加入しました");
+		
+		phone.initFee();
+		
+		phone.call();
+		phone.call();
+		phone.call();
+		phone.call();
+		
+		System.out.println("今月の電話料金は\\"+ phone.getFee() +"です");
+		
+		
 	}
 
 }
