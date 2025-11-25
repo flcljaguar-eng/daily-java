@@ -62,27 +62,32 @@ class Main {
 
 	public static void main(String[] args) throws IOException {
 		/*ここから記入*/
+		/** Depositorオブジェクトを生成 */
 		Depositor depo = new Depositor();
 		
 		System.out.println("預金者情報を登録します。");
 		System.out.print("input name? >>");
 		
+		/** コンソールに入力された預金者名をDepositorの引数に */
 		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
 		String name = rd.readLine();
 		depo.setName(name);
 		
 		System.out.print("input money? >>");
+		
+		/** コンソールに入力された預金額をDepositorの引数に */
 		String money = rd.readLine();
 		int mon = Integer.parseInt(money);
 		depo.setMoney(mon);
 		
 		System.out.println("銀行に預金者情報を登録します。\n");
 		
+		/** Bankオブジェクトを生成 */
 		Bank bank = new Bank();
-		
+		/** BankオブジェクトのsetDepositerの引数にDepositorオブジェクトを設定 */
 		bank.setDepositer(depo);
 		
-		
+		/** Bank#showDataを呼び出し */
 		bank.showData();
 	}
 
