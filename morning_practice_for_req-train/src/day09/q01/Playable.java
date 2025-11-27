@@ -6,3 +6,4 @@ public interface Playable {
 
 	int doJanken() throws IOException;
 }
+
